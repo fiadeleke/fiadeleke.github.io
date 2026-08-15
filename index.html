@@ -3,712 +3,613 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
-    <meta name="supported-color-schemes" content="light">
-    <meta name="description" content="Fiyinfoluwa Adeleke - Associate General Counsel, Head of International Privacy at Yahoo. Expert in data protection, AI governance, and privacy compliance.">
-    <title>Fiyinfoluwa Adeleke | Privacy & Technology Leader</title>
+    <meta name="color-scheme" content="light">
+    <title>Fiyinfoluwa Adeleke | Privacy, AI Governance and Digital Regulation</title>
+    <meta name="description" content="Senior regulatory lawyer working across privacy, AI governance and digital regulation. Regulatory engagement and enforcement across Europe, governance programmes built for regulatory scrutiny, and doctoral research on algorithmic accountability at UCD.">
     <style>
+        :root {
+            --ink: #1D2433;
+            --muted: #49536A;
+            --accent: #1F4E79;
+            --rule: #D9DEE7;
+            --paper: #FFFFFF;
+            --hero-bg: #F6F7F9;
+            --serif: Georgia, "Times New Roman", Times, serif;
+            --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Force light mode - prevent dark mode issues */
         html {
-            color-scheme: light only;
-            background-color: #FFFFFF !important;
-        }
-
-        :root {
-            --navy: #2C3E50;
-            --teal: #16A085;
-            --light-grey: #F8F9FA;
-            --mid-grey: #E9ECEF;
-            --text-grey: #495057;
-            --white: #FFFFFF;
-            color-scheme: light only;
+            color-scheme: light;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--navy) !important;
-            background-color: var(--white) !important;
-            /* Force light mode colours */
-            color-scheme: light only;
+            font-family: var(--sans);
+            font-size: 1.0625rem;
+            line-height: 1.65;
+            color: var(--ink);
+            background: var(--paper);
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Force all sections to have proper backgrounds and text colours */
-        section, header, footer, nav, div, p, h1, h2, h3, h4, h5, h6, span, a, li {
-            color-scheme: light only;
+        a {
+            color: var(--accent);
         }
 
-        section {
-            background-color: var(--white) !important;
-            color: var(--navy) !important;
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--ink);
+            color: #FFFFFF;
+            padding: 0.75rem 1.25rem;
+            z-index: 200;
+        }
+
+        .skip-link:focus {
+            left: 0;
+            top: 0;
+            color: #FFFFFF;
         }
 
         /* Navigation */
-        nav {
-            position: fixed;
+        .site-nav {
+            position: sticky;
             top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--rule);
         }
 
-        nav ul {
-            list-style: none;
+        .site-nav nav {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
             display: flex;
             justify-content: center;
-            padding: 1.2rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 2.5rem;
         }
 
-        nav a {
-            color: var(--navy);
+        .site-nav a {
+            color: var(--ink);
             text-decoration: none;
-            padding: 0.5rem 1.5rem;
             font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s ease;
         }
 
-        nav a:hover {
-            color: var(--teal);
+        .site-nav a:hover {
+            color: var(--accent);
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
-            margin-top: 80px;
-            padding: 6rem 2rem;
+            background: var(--hero-bg);
+            border-bottom: 1px solid var(--rule);
             text-align: center;
-            background: linear-gradient(135deg, var(--light-grey) 0%, var(--white) 100%);
+            padding: 6rem 1.5rem 5rem;
+        }
+
+        .portrait {
+            width: 160px;
+            height: auto;
+            border: 1px solid var(--rule);
+            border-radius: 4px;
+            margin-bottom: 2.25rem;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 6vw, 3.4rem);
             font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--navy);
+            letter-spacing: -0.01em;
         }
 
-        .hero .title {
-            font-size: 1.3rem;
-            color: var(--teal);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-grey);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .contact-links {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            color: var(--teal);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-links a:hover {
-            opacity: 0.7;
-        }
-
-        /* Section Styling */
-        section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
-            color: var(--navy);
-            font-weight: 600;
-        }
-
-        /* About Section */
-        .about-content {
+        .hero-tagline {
+            margin-top: 0.75rem;
+            color: var(--muted);
             font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--text-grey);
+            letter-spacing: 0.04em;
         }
 
-        .about-content p {
-            margin-bottom: 1.5rem;
+        .hero-line {
+            margin: 1.75rem auto 0;
+            max-width: 32em;
+            font-family: var(--serif);
+            font-size: clamp(1.3rem, 3vw, 1.55rem);
+            line-height: 1.5;
         }
 
-        .key-strengths {
-            background-color: var(--light-grey);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 2rem;
-        }
-
-        .key-strengths h3 {
-            font-size: 1.2rem;
-            color: var(--navy);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .key-strengths ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .key-strengths li {
-            padding: 0.5rem 0;
-            color: var(--text-grey);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .key-strengths li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--teal);
-            font-weight: bold;
-        }
-
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid var(--mid-grey);
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .experience-header h3 {
-            font-size: 1.3rem;
-            color: var(--navy);
-            font-weight: 600;
-        }
-
-        .experience-header .period {
-            color: var(--teal);
-            font-weight: 500;
+        .hero-facts {
+            margin: 2.25rem auto 0;
+            color: var(--muted);
             font-size: 0.95rem;
-        }
-
-        .company {
-            font-size: 1.1rem;
-            color: var(--text-grey);
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .experience-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .experience-item li {
-            padding: 0.5rem 0;
-            color: var(--text-grey);
             line-height: 1.7;
-            position: relative;
-            padding-left: 1.5rem;
         }
 
-        .experience-item li:before {
-            content: "•";
+        /* Sections */
+        .section {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 5.5rem 1.5rem;
+        }
+
+        .section > h2 {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 600;
+            padding-bottom: 1.1rem;
+            margin-bottom: 2.75rem;
+            position: relative;
+        }
+
+        .section > h2::after {
+            content: "";
             position: absolute;
             left: 0;
-            color: var(--teal);
-            font-weight: bold;
-            font-size: 1.2rem;
+            bottom: 0;
+            width: 2.5rem;
+            height: 2px;
+            background: var(--accent);
         }
 
-        /* Expertise Section */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+        section[id] {
+            scroll-margin-top: 4.5rem;
         }
 
-        .expertise-card {
-            background-color: var(--light-grey);
-            padding: 1.8rem;
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* About */
+        .about {
+            max-width: 720px;
         }
 
-        .expertise-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        .about p + p {
+            margin-top: 1.25rem;
         }
 
-        .expertise-card h3 {
-            color: var(--teal);
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
+        /* Capabilities */
+        .capability + .capability {
+            border-top: 1px solid var(--rule);
+        }
+
+        .capability {
+            padding: 2.75rem 0;
+        }
+
+        .capability h3 {
+            font-family: var(--serif);
+            font-size: 1.4rem;
             font-weight: 600;
-        }
-
-        .expertise-card p {
-            color: var(--text-grey);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Certifications */
-        .cert-list {
             display: flex;
-            flex-wrap: wrap;
+            align-items: baseline;
             gap: 1rem;
+        }
+
+        .num {
+            font-style: italic;
+            color: var(--accent);
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+        }
+
+        .claim {
+            margin-top: 1.25rem;
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            line-height: 1.5;
+            max-width: 40em;
+        }
+
+        .evidence {
+            margin-top: 1.5rem;
+            list-style: none;
+        }
+
+        .evidence li {
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .evidence li + li {
             margin-top: 1rem;
         }
 
-        .cert-badge {
-            background-color: var(--teal);
-            color: var(--white);
-            padding: 0.6rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        /* Research */
+        .research-title {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
-        /* Thought Leadership Section */
-        .articles-grid {
+        .meta {
+            margin-top: 0.5rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .research-body {
+            margin-top: 1.5rem;
+            max-width: 68ch;
+        }
+
+        .research-link {
+            margin-top: 1.75rem;
+        }
+
+        .research-link a {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Selected speaking */
+        .speaking-list {
+            list-style: none;
+        }
+
+        .speaking-list li {
+            padding: 1.75rem 0;
+        }
+
+        .speaking-list li + li {
+            border-top: 1px solid var(--rule);
+        }
+
+        .speaking-list h3 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Credentials */
+        .credentials {
             display: grid;
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.75rem;
         }
 
-        .article-card {
-            background-color: var(--light-grey);
-            padding: 2rem;
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .credentials h3 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.1rem;
         }
 
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        .credentials ul {
+            list-style: none;
         }
 
-        .article-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            color: var(--navy);
+        .credentials li {
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
-        .article-card h3 a {
-            color: var(--navy);
-            text-decoration: none;
-            transition: color 0.3s ease;
+        /* Career */
+        .role-block + .role-block {
+            margin-top: 2.75rem;
         }
 
-        .article-card h3 a:hover {
-            color: var(--teal);
+        .employer {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 600;
         }
 
-        .article-meta {
-            color: var(--text-grey);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+        .career-list {
+            list-style: none;
+            margin-top: 0.75rem;
         }
 
-        .article-excerpt {
-            color: var(--text-grey);
-            line-height: 1.7;
-            margin-bottom: 1rem;
+        .career-list li {
+            margin-top: 0.6rem;
         }
 
-        .read-more {
-            color: var(--teal);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
+        .dates {
+            color: var(--muted);
+            white-space: nowrap;
         }
 
-        .read-more:hover {
-            opacity: 0.7;
+        .career-note {
+            margin-top: 0.9rem;
+            font-size: 0.95rem;
+            color: var(--muted);
+            max-width: 60ch;
         }
 
-        .loading {
-            text-align: center;
-            color: var(--text-grey);
-            padding: 2rem;
+        /* Contact */
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 2.5rem;
+        }
+
+        .contact-list a {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .contact-loc {
+            margin-top: 1.5rem;
+            color: var(--muted);
         }
 
         /* Footer */
         footer {
-            background-color: var(--navy);
-            color: var(--white);
+            border-top: 1px solid var(--rule);
+            padding: 3rem 1.5rem;
             text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
+            color: var(--muted);
+            font-size: 0.9rem;
         }
 
-        footer p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        footer a {
-            color: var(--teal);
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        /* Responsive */
+        @media (max-width: 640px) {
+            .site-nav nav {
+                gap: 1.5rem;
+                padding: 0.75rem 1rem;
             }
 
-            .hero .title {
-                font-size: 1.1rem;
+            .hero {
+                padding: 4.5rem 1.25rem 3.75rem;
             }
 
-            nav ul {
+            .section {
+                padding: 4rem 1.25rem;
+            }
+
+            .capability {
+                padding: 2.25rem 0;
+            }
+
+            .capability h3 {
+                display: block;
+            }
+
+            .num {
+                display: block;
+                margin-bottom: 0.4rem;
+            }
+
+            .credentials {
+                grid-template-columns: 1fr;
+                gap: 2.25rem;
+            }
+
+            .contact-list {
                 flex-direction: column;
-                align-items: center;
+                gap: 0.75rem;
             }
+        }
 
-            nav a {
-                padding: 0.5rem;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            section {
-                padding: 3rem 1.5rem;
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#thought-leadership">Thought Leadership</a></li>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div style="margin-bottom: 2rem;">
-            <img src="profile-photo-new.jpg" alt="Fiyinfoluwa Adeleke" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
-        </div>
-        <h1>Fiyinfoluwa Adeleke</h1>
-        <p class="title">Associate General Counsel | Head of International Privacy</p>
-        <p class="subtitle">Strategic advisor on data protection, AI governance, and privacy compliance frameworks across EMEA, APAC, and LATAM</p>
-        <div class="contact-links">
-            <a href="mailto:fiyinfoluwa.adeleke@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/fiyinfoluwaadeleke" target="_blank">LinkedIn</a>
-            <a href="https://oauife.academia.edu/FiyinfoluwaAdeleke" target="_blank">Academia.edu</a>
-            <a href="tel:+353830435545">Mobile</a>
-            <span style="color: var(--text-grey);">Dublin, Ireland</span>
-        </div>
+    <header class="site-nav">
+        <nav aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#research">Research</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        <div class="about-content">
-            <p>Fiyinfoluwa Adeleke is Associate General Counsel and Head of International Privacy at Yahoo, where he oversees privacy and data protection programmes across Europe, Asia-Pacific, and Latin America. He works at the intersection of regulation and compliance, advising on recommendation systems, automated decision-making, and algorithmic transparency under GDPR and the EU AI Act. Fiyinfoluwa represents Yahoo in regulatory matters with data protection authorities across multiple jurisdictions.</p>
-            
-            <p>Previously at Hertz, he led data protection compliance programmes across EMEA and Asia-Pacific. He also worked in financial services at Equiniti, bringing experience from a highly regulated sector to technology privacy challenges.</p>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-name">
+            <img class="portrait" src="profile-photo-new.jpg" alt="Fiyinfoluwa Adeleke" width="160" height="149">
+            <h1 id="hero-name">Fiyinfoluwa Adeleke</h1>
+            <p class="hero-tagline">Privacy, AI governance and digital regulation</p>
+            <p class="hero-line">I build the governance that regulators examine, and I answer for it in front of them.</p>
+            <p class="hero-facts">
+                Associate General Counsel, Head of International Privacy, Yahoo<br>
+                Doctoral researcher, UCD Sutherland School of Law<br>
+                Dublin, Ireland
+            </p>
+        </section>
 
-            <p>A solicitor qualified in Ireland and the UK, and a Barrister & Solicitor in Nigeria, he brings international regulatory expertise to complex technology privacy challenges. Fiyinfoluwa speaks regularly at privacy conferences, including Dentons Privacy Academy and Privacy+Security Forum, on AI governance and cross-border compliance. He holds FIP, CIPM, CIPP/E, and GRCP certifications.</p>
-        </div>
-    </section>
+        <section id="about" class="section about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p>I lead international privacy at Yahoo, covering Europe, Asia-Pacific and Latin America, with responsibility spanning regulatory engagement, governance and incident response.</p>
+            <p>My work runs from building the governance and controls intended to prevent problems, through leading the response when incidents occur, to representing the organisation when a regulator tests whether any of it worked.</p>
+            <p>I qualified as a litigator before I became a regulatory lawyer, which is why I am as comfortable in contested proceedings as in advisory work.</p>
+            <p>I research the regulation of algorithmic decision-making at doctoral level at UCD.</p>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Professional Experience</h2>
+        <section id="capabilities" class="section" aria-labelledby="capabilities-heading">
+            <h2 id="capabilities-heading">Capabilities</h2>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <h3>Senior Director, Associate General Counsel – Head of International Privacy</h3>
-                <span class="period">Oct 2022 – Present</span>
-            </div>
-            <p class="company">Yahoo International Limited, Dublin, Ireland</p>
-        </div>
+            <article class="capability" aria-labelledby="cap-1">
+                <h3 id="cap-1"><span class="num" aria-hidden="true">01</span>Regulatory Engagement and Enforcement</h3>
+                <p class="claim">I represent organisations before data protection authorities, including in contested regulatory proceedings.</p>
+                <ul class="evidence">
+                    <li>Represented Yahoo in contested proceedings before the CNIL's restricted committee concerning cookie compliance, in which the committee imposed a sanction materially below the rapporteur's recommendation, and subsequently before the Conseil d'État on appeal.</li>
+                    <li>Lead technically complex regulatory investigations end to end, drafting Yahoo's formal submissions in Data Protection Commission inquiries and appearing in person before regulators in Ireland, France and Italy.</li>
+                    <li>Represented both Yahoo entities before data protection authorities following the 2025 separation of the EMEA business, addressing how data was managed and how data subject rights were protected through the restructuring.</li>
+                </ul>
+            </article>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <h3>Director, Assistant General Counsel – Global Privacy</h3>
-                <span class="period">May 2021 – Oct 2022</span>
-            </div>
-            <p class="company">Yahoo EMEA Limited, Dublin, Ireland</p>
-        </div>
+            <article class="capability" aria-labelledby="cap-2">
+                <h3 id="cap-2"><span class="num" aria-hidden="true">02</span>Regulatory Strategy and Public Policy</h3>
+                <p class="claim">I shape corporate positions on digital regulation and work with public policy teams on regulatory strategy and engagement.</p>
+                <ul class="evidence">
+                    <li>Serve as the subject-matter lead Yahoo's global public policy team relies on when forming the company's position on EU digital regulation, across platform regulation, competition, ePrivacy and online safety instruments.</li>
+                    <li>Represented Yahoo in the European Commission's data sharing consultation under the Digital Markets Act, and before the UK Competition and Markets Authority.</li>
+                    <li>Represented Yahoo at an Ibec Technology Ireland industry roundtable on the Irish regulatory landscape, including implementation timelines for instruments such as the e-Evidence package, ahead of Ireland's 2026 Presidency of the Council of the European Union.</li>
+                </ul>
+            </article>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <h3>Director, Senior Privacy Counsel & Head of Privacy</h3>
-                <span class="period">Sept 2017 – May 2021</span>
-            </div>
-            <p class="company">Hertz International, Dublin, Ireland</p>
-        </div>
+            <article class="capability" aria-labelledby="cap-3">
+                <h3 id="cap-3"><span class="num" aria-hidden="true">03</span>Governance and Programme Building</h3>
+                <p class="claim">I build privacy and AI governance programmes that stand up to audit, regulatory examination and board scrutiny.</p>
+                <ul class="evidence">
+                    <li>Led the privacy workstream on the 2025 separation of Yahoo's EMEA business, building the governance structure for the newly established entity from the ground up and putting it into operation.</li>
+                    <li>Built Yahoo's privacy and AI governance programme, including committee structures, business-line accountability and mapped controls, and scaled it from Europe into the global template used across all regions including the United States. Regulatory response time fell by 60 per cent. Report programme status, regulatory risk and remediation decisions to senior leadership and the board.</li>
+                    <li>Led the GDPR compliance programme at Hertz International across global IT systems: discovery and classification of the systems estate, gap analysis, remediation, and a quarterly second-line testing cycle. The programme passed independent audit by Cognizant, retained by the audit committee of the Hertz board in the United States, against plan in December 2017 and against delivery in April 2018. Hertz then expanded the scope of its annual audit to include privacy compliance, conducted by PwC.</li>
+                </ul>
+            </article>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <h3>Quality Lead, Products & Services</h3>
-                <span class="period">Nov 2014 – Aug 2017</span>
-            </div>
-            <p class="company">EQUINITI, Amsterdam, Netherlands</p>
-        </div>
+            <article class="capability" aria-labelledby="cap-4">
+                <h3 id="cap-4"><span class="num" aria-hidden="true">04</span>AI Governance and Algorithmic Accountability</h3>
+                <p class="claim">I advise product and engineering teams on AI governance and automated decision-making, and research its regulation at doctoral level.</p>
+                <ul class="evidence">
+                    <li>Led the privacy assessment for a global contactless vehicle rental implementation using facial recognition to authenticate customers and unlock vehicles: evaluated competing identity verification providers, authored the data protection impact assessment, and set the conditions on which deployment proceeded.</li>
+                    <li>Advise product and engineering teams on recommender systems and automated processing under the EU AI Act and GDPR, translating obligations into requirements the business can build against.</li>
+                    <li>Research the regulation of algorithmic credit scoring at doctoral level at UCD Sutherland School of Law, examining how EU law protects individuals against algorithmic discrimination where protected characteristics are inferred rather than processed directly.</li>
+                </ul>
+            </article>
 
-        <div class="experience-item">
-            <div class="experience-header">
-                <h3>Associate, Corporate & Commercial</h3>
-                <span class="period">Oct 2011 – Aug 2013</span>
-            </div>
-            <p class="company">G. ELIAS & CO., Solicitors & Advocates, Nigeria</p>
-        </div>
+            <article class="capability" aria-labelledby="cap-5">
+                <h3 id="cap-5"><span class="num" aria-hidden="true">05</span>Trust, Safety and Law Enforcement</h3>
+                <p class="claim">I own the privacy and regulatory dimension of online safety, content moderation and law enforcement response.</p>
+                <ul class="evidence">
+                    <li>Own the privacy dimension of Trust and Safety for the EMEA region as in-region counsel, with the core function based in the United States.</li>
+                    <li>Led Yahoo's Digital Services Act transparency reporting, covering law enforcement disclosure practices and right to be forgotten requests, and established the CSAM reporting format.</li>
+                    <li>Led the privacy and regulatory workstream for Yahoo's CSAM detection implementation, authoring the data protection impact assessment, engaging the Data Protection Commission proactively, and establishing the safeguards and conditions the deployment is required to meet.</li>
+                </ul>
+            </article>
 
-        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mid-grey);">
-            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--navy);">Admitted to Practice</h3>
-            <div class="cert-list">
-                <span class="cert-badge">Ireland (Solicitor) | Member, Law Society of Ireland</span>
-                <span class="cert-badge">England & Wales (Solicitor) | Member, The Law Society, UK</span>
-                <span class="cert-badge">Nigeria (Barrister & Solicitor) | Member, Nigerian Bar Association</span>
-            </div>
+            <article class="capability" aria-labelledby="cap-6">
+                <h3 id="cap-6"><span class="num" aria-hidden="true">06</span>Information Security, Incident and Breach Response</h3>
+                <p class="claim">I lead the privacy and regulatory dimension of information security, from governance and risk through incident response and regulatory engagement.</p>
+                <ul class="evidence">
+                    <li>Led the regulatory response to a cyber attack and resulting personal data breach at a Hertz UK subsidiary, drafting the full breach reporting documentation and conducting the engagement with the Information Commissioner's Office. The ICO concluded the matter without enforcement action. Also handled the civil claims that followed.</li>
+                    <li>Took on Yahoo's information security governance programme as one of the first business-critical workstreams on joining, establishing the EMEA decision-making framework through which security risk is governed: reporting and escalation routes, documented allocation of responsibilities, and ongoing governance of Yahoo Inc's role as processor.</li>
+                    <li>Lead the privacy dimension of security incident response across the international business, owning the regulatory assessment and all privacy-side submissions, and engaging the Data Protection Commission proactively rather than only on notification.</li>
+                </ul>
+            </article>
+        </section>
 
-            <h3 style="font-size: 1.3rem; margin: 2.5rem 0 1.5rem; color: var(--navy);">Professional Certifications</h3>
-            <div class="cert-list">
-                <span class="cert-badge" style="background-color: var(--mid-grey); color: var(--navy);">IAPP Fellow of Information Privacy (FIP)</span>
-                <span class="cert-badge" style="background-color: var(--mid-grey); color: var(--navy);">CIPM</span>
-                <span class="cert-badge" style="background-color: var(--mid-grey); color: var(--navy);">CIPP/E</span>
-                <span class="cert-badge" style="background-color: var(--mid-grey); color: var(--navy);">CDPSE</span>
-                <span class="cert-badge" style="background-color: var(--mid-grey); color: var(--navy);">GRCP</span>
-                <span class="cert-badge" style="background-color: var(--mid-grey); color: var(--navy);">Green Belt Lean Six Sigma</span>
-            </div>
+        <section id="research" class="section" aria-labelledby="research-heading">
+            <h2 id="research-heading">Research</h2>
+            <h3 class="research-title">Regulating Algorithmic Credit Scoring and Protecting Data Subjects' Rights in the EU</h3>
+            <p class="meta">UCD Sutherland School of Law · Supervisor: Dr TJ McIntyre</p>
+            <p class="research-body">AI credit scoring promises financial inclusion through better prediction, but relies on alternative data that may entrench existing inequality. My research asks whether EU law actually protects people against algorithmic discrimination, across equality law, GDPR, the AI Act and the consumer credit framework. It examines how equality concepts apply when protected characteristics are inferred rather than processed directly, whether transparency obligations are sufficient for discrimination to be detected at all, and what remedies are genuinely available.</p>
+            <p class="research-link"><a href="https://www.ucd.ie/law/people/researchstudentprofiles/fiyinfoluwaadeleke/">→ UCD research profile</a></p>
+        </section>
 
-            <h3 style="font-size: 1.3rem; margin: 2.5rem 0 1rem; color: var(--navy);">Education</h3>
-            <ul style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 1rem; color: var(--text-grey);">
-                    <strong style="color: var(--navy);">LLM Information Technology and Intellectual Property Law</strong><br>
-                    University College Dublin, Ireland
+        <section id="speaking" class="section" aria-labelledby="speaking-heading">
+            <h2 id="speaking-heading">Selected speaking</h2>
+            <ul class="speaking-list">
+                <li>
+                    <h3>Recommender Systems: Practical Challenges in Compliance and Enforcement</h3>
+                    <p class="meta">Dentons Privacy Academy · May 2026</p>
                 </li>
-                <li style="margin-bottom: 1rem; color: var(--text-grey);">
-                    <strong style="color: var(--navy);">Master of Laws, Finance and Law</strong><br>
-                    Duisenberg School of Finance, University of Amsterdam, Netherlands
+                <li>
+                    <h3>Innovate &amp; Empower: Responsible AI for a Diverse Future</h3>
+                    <p class="meta">AWS Experience · October 2025</p>
                 </li>
-                <li style="margin-bottom: 1rem; color: var(--text-grey);">
-                    <strong style="color: var(--navy);">BL Law</strong><br>
-                    The Nigerian Law School, 2009-2010
+                <li>
+                    <h3>Recommender Systems: Practical Challenges in Meeting EU AI Act and GDPR Compliance</h3>
+                    <p class="meta">Dentons Privacy Academy · April 2025</p>
                 </li>
-                <li style="margin-bottom: 1rem; color: var(--text-grey);">
-                    <strong style="color: var(--navy);">LLB Law</strong><br>
-                    Obafemi Awolowo University, Nigeria
+                <li>
+                    <h3>Ad Tech: Managing Compliance in a New First Party (or NO) Cookie World</h3>
+                    <p class="meta">Privacy+Security Academy Forum · March 2022</p>
+                </li>
+                <li>
+                    <h3>Cookies and adtech: preparing your organisation for regulatory risk</h3>
+                    <p class="meta">Society for Computers and Law, Annual Data Protection Update · January 2022</p>
                 </li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise">
-        <h2>Areas of Expertise</h2>
-        
-        <div class="expertise-grid">
-            <div class="expertise-card">
-                <h3>Technology Privacy & Compliance</h3>
-                <p>I advise technology companies on privacy frameworks across digital products and services, managing cross-border data transfers and ensuring regulatory compliance whilst supporting business innovation across multiple jurisdictions.</p>
+        <section id="credentials" class="section" aria-labelledby="credentials-heading">
+            <h2 id="credentials-heading">Credentials</h2>
+            <div class="credentials">
+                <div>
+                    <h3>Admitted to practise</h3>
+                    <ul>
+                        <li>Ireland · Solicitor</li>
+                        <li>England &amp; Wales · Solicitor</li>
+                        <li>Nigeria · Barrister &amp; Solicitor</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Professional</h3>
+                    <ul>
+                        <li>IAPP Fellow of Information Privacy (FIP)</li>
+                        <li>CIPM · CIPP/E · CDPSE · GRCP · Lean Six Sigma Green Belt</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Education</h3>
+                    <ul>
+                        <li>PhD Candidate (Part-Time), Law · UCD Sutherland School of Law</li>
+                        <li>LLM Information Technology and Intellectual Property Law · University College Dublin</li>
+                        <li>LLM Finance and Law · Duisenberg School of Finance, University of Amsterdam</li>
+                        <li>BL · The Nigerian Law School</li>
+                        <li>LLB · Obafemi Awolowo University</li>
+                    </ul>
+                </div>
             </div>
-            <div class="expertise-card">
-                <h3>AI Governance & Compliance</h3>
-                <p>I work on AI recommendation systems and automated decision-making, advising product teams on privacy-by-design principles and helping organisations navigate emerging requirements under GDPR and the EU AI Act.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Information Security & Incident Response</h3>
-                <p>I lead on data breach response and security incident management, coordinating with technical teams to manage regulatory notifications, mitigate risk, and ensure compliance with breach reporting obligations.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Law Enforcement & Trust & Safety Partnerships</h3>
-                <p>I partner with law enforcement response and trust & safety teams on regulatory inquiries, content moderation, and online safety matters, providing privacy counsel on complex operational issues.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Regulatory Investigations, Inquiries & Engagement</h3>
-                <p>I manage regulatory investigations and inquiries with data protection authorities, building productive relationships with regulators whilst defending company interests and advancing compliance objectives.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Privacy Governance & Programme Leadership</h3>
-                <p>I build privacy governance frameworks and advise boards of directors on data protection strategy, establishing privacy committees, developing compliance programmes, and embedding privacy governance into organisational decision-making.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Thought Leadership Section -->
-    <section id="thought-leadership">
-        <h2>Thought Leadership</h2>
-        
-        <!-- Speaking Engagements -->
-        <h3 style="font-size: 1.5rem; margin-bottom: 2rem; color: var(--navy); font-weight: 600;">Speaking Engagements</h3>
-        
-        <div class="articles-grid">
-            <div class="article-card">
-                <h3>Innovate & Empower: Responsible AI for a Diverse Future</h3>
-                <div class="article-meta">AWS Experience | October 30, 2025 | Dublin, Ireland</div>
-                <p class="article-excerpt">Speaker and Panellist at AWS's Black History Month event, discussing why Privacy Regulations Are Outpacing AI Development and the intersection of responsible AI, AI governance, privacy compliance, and inclusive technology development.</p>
+        <section id="career" class="section" aria-labelledby="career-heading">
+            <h2 id="career-heading">Career</h2>
+
+            <div class="role-block">
+                <h3 class="employer">Yahoo · Dublin</h3>
+                <ul class="career-list">
+                    <li>Senior Director, Associate General Counsel, Head of International Privacy <span class="dates">· 2022 to present</span></li>
+                    <li>Director, Assistant General Counsel, Global Privacy <span class="dates">· 2021 to 2022</span></li>
+                </ul>
+                <p class="career-note">Employment transferred to Yahoo International following the 2025 separation of Yahoo's EMEA business. Responsibility for both entities retained.</p>
             </div>
 
-            <div class="article-card">
-                <h3>Recommender Systems: Practical Challenges in Meeting EU AI Act and GDPR Compliance</h3>
-                <div class="article-meta">Dentons Privacy Academy | April 14, 2025</div>
-                <p class="article-excerpt">Presented on AI governance frameworks and privacy-by-design implementation for recommendation systems, addressing practical compliance challenges under the EU AI Act and GDPR.</p>
+            <div class="role-block">
+                <h3 class="employer">Hertz International · Dublin</h3>
+                <ul class="career-list">
+                    <li>Director, Senior Privacy Counsel and Head of Privacy <span class="dates">· 2017 to 2021</span></li>
+                </ul>
             </div>
 
-            <div class="article-card">
-                <h3>Ad Tech: Managing Compliance in a New First Party (or NO) Cookie World</h3>
-                <div class="article-meta">Privacy+Security Academy Forum | March 24, 2022</div>
-                <p class="article-excerpt">Panel discussion on evolving privacy regulations and cookie compliance strategies, exploring the transition to cookieless advertising and emerging privacy-preserving technologies.</p>
+            <div class="role-block">
+                <h3 class="employer">EQUINITI · Amsterdam</h3>
+                <ul class="career-list">
+                    <li>KYC/AML Analyst, then Lead Analyst, then Quality Lead, Products and Services <span class="dates">· 2014 to 2017</span></li>
+                </ul>
             </div>
 
-            <div class="article-card">
-                <h3>Cookies and adtech – preparing your organisation for regulatory risk</h3>
-                <div class="article-meta">Society for Computers and Law (SCL) | Annual Data Protection Update | January 27, 2022</div>
-                <p class="article-excerpt">Addressed alternatives to third-party cookies, privacy sandbox technologies, and emerging business and regulatory risk implications for digital advertising.</p>
+            <div class="role-block">
+                <h3 class="employer">G. Elias &amp; Co., Solicitors and Advocates · Lagos</h3>
+                <ul class="career-list">
+                    <li>Associate, Corporate and Commercial <span class="dates">· 2011 to 2013</span></li>
+                </ul>
             </div>
-        </div>
+        </section>
 
-        <!-- Medium Articles -->
-        <h3 style="font-size: 1.5rem; margin: 4rem 0 2rem; color: var(--navy); font-weight: 600;">Articles & Insights</h3>
-        <p style="color: var(--text-grey); margin-bottom: 2rem; font-size: 1.05rem;">
-            Explore my latest articles on privacy, data protection, AI governance, and the evolving regulatory landscape.
-        </p>
-        <div id="medium-articles" class="articles-grid">
-            <div class="loading">Loading articles...</div>
-        </div>
-    </section>
+        <section id="contact" class="section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <ul class="contact-list">
+                <li><a href="mailto:fiyinfoluwa.adeleke@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/fiyinfoluwaadeleke" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://oauife.academia.edu/FiyinfoluwaAdeleke" target="_blank" rel="noopener noreferrer">Academia.edu</a></li>
+                <li><a href="tel:+353830435545">Mobile</a></li>
+            </ul>
+            <p class="contact-loc">Dublin, Ireland</p>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Fiyinfoluwa Adeleke. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-            Content and design by Fiyinfoluwa Adeleke. Site built with Claude.
-        </p>
-        <p style="margin-top: 1rem;">
-            <a href="mailto:fiyinfoluwa.adeleke@gmail.com">Get in touch</a>
-        </p>
+        <p>© 2026 Fiyinfoluwa Adeleke. All rights reserved.</p>
     </footer>
-
-    <!-- Medium RSS Feed Integration -->
-    <script>
-        // Medium RSS to JSON API endpoint
-        const MEDIUM_USERNAME = 'fiyinfoluwa.adeleke'; // Your Medium username
-        const RSS_TO_JSON_API = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`;
-
-        async function loadMediumArticles() {
-            try {
-                const response = await fetch(RSS_TO_JSON_API);
-                const data = await response.json();
-                
-                if (data.status === 'ok' && data.items && data.items.length > 0) {
-                    displayArticles(data.items.slice(0, 6)); // Display up to 6 most recent articles
-                } else {
-                    displayNoArticles();
-                }
-            } catch (error) {
-                console.error('Error fetching Medium articles:', error);
-                displayError();
-            }
-        }
-
-        function displayArticles(articles) {
-            const container = document.getElementById('medium-articles');
-            container.innerHTML = articles.map(article => {
-                // Extract excerpt from description
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = article.description;
-                const excerpt = tempDiv.textContent.substring(0, 200) + '...';
-                
-                // Format date
-                const date = new Date(article.pubDate).toLocaleDateString('en-GB', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-
-                return `
-                    <div class="article-card">
-                        <h3><a href="${article.link}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
-                        <div class="article-meta">Published on ${date}</div>
-                        <p class="article-excerpt">${excerpt}</p>
-                        <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="read-more">Read full article →</a>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function displayNoArticles() {
-            const container = document.getElementById('medium-articles');
-            container.innerHTML = `
-                <div style="text-align: center; color: var(--text-grey); padding: 2rem;">
-                    <p>Articles coming soon. Follow me on <a href="https://medium.com/@${MEDIUM_USERNAME}" target="_blank" rel="noopener noreferrer" style="color: var(--teal);">Medium</a> for updates.</p>
-                </div>
-            `;
-        }
-
-        function displayError() {
-            const container = document.getElementById('medium-articles');
-            container.innerHTML = `
-                <div style="text-align: center; color: var(--text-grey); padding: 2rem;">
-                    <p>Unable to load articles at this time. Visit my <a href="https://medium.com/@${MEDIUM_USERNAME}" target="_blank" rel="noopener noreferrer" style="color: var(--teal);">Medium profile</a> to read my latest work.</p>
-                </div>
-            `;
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetSection.offsetTop - navHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Load Medium articles when page loads
-        document.addEventListener('DOMContentLoaded', loadMediumArticles);
-    </script>
 </body>
 </html>
